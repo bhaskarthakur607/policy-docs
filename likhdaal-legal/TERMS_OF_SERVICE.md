@@ -1,6 +1,6 @@
 # Terms of Service — LikhDaal
 
-**Effective date:** 27 August 2026  
+**Effective date:** 9 September 2026  
 **App name:** LikhDaal  
 **Developer:** Bhaskar  
 **Contact:** support.likhdaal@gmail.com
@@ -22,8 +22,10 @@ LikhDaal is a **personal finance helper** that lets you:
 - Record income and expenses
 - Organize entries by category
 - View summaries and reports
-- Set recurring payments and optional reminders
-- Export reports (where available)
+- Set budgets, recurring payments, and optional reminders
+- Track lent & borrowed balances and notes
+- Optionally enable **Cloud sync** for about the last 6 months of dated entries
+- Create encrypted offline backups and export reports (where available)
 
 LikhDaal is **not a bank**, **not a payment service**, and **does not** move, hold, or transmit money. All figures are **entered by you** for personal tracking only.
 
@@ -43,11 +45,11 @@ You must:
 
 ### 4.1 Registration
 
-You register with a **mobile number** and **4-digit MPIN**. You are responsible for keeping your MPIN confidential and for activity on your device under your account.
+You register with a **mobile number** and **4-digit MPIN**. Phone OTP (via Supabase Auth) may be used to create or verify a cloud-linked account and to sign in on a new device. You are responsible for keeping your MPIN confidential and for activity under your account on your devices.
 
 ### 4.2 Device security
 
-Because data is stored **on your device**, you should:
+Because primary data lives on your device (and optionally in the cloud when sync is on), you should:
 
 - Use a device screen lock
 - Not share your MPIN
@@ -57,7 +59,7 @@ We are not liable for unauthorized access caused by lost devices, shared MPINs, 
 
 ### 4.3 Account deletion
 
-You may delete your account from **Settings → Delete account**. This removes your data from the app on that device as described in the Privacy Policy.
+You may delete your account from **Settings → Delete account**. This removes your data from the app on that device and associated cloud sync data for that account when applicable, as described in the Privacy Policy.
 
 ---
 
@@ -74,9 +76,9 @@ You may delete your account from **Settings → Delete account**. This removes y
 You agree **not** to:
 
 - Use the App for illegal activity or fraud
-- Attempt to reverse engineer, hack, or disrupt the App
+- Attempt to reverse engineer, hack, or disrupt the App or related cloud services
 - Use the App to launder money or misrepresent financial information to third parties
-- Upload harmful code or interfere with other users (if multiplayer/cloud features are added later)
+- Upload harmful code or interfere with other users’ accounts or sync
 
 We may suspend or terminate access for violations.
 
@@ -90,11 +92,13 @@ You may not copy, modify, distribute, or sell the App except as allowed by law o
 
 ---
 
-## 8. Offline storage and backup
+## 8. Offline storage, Cloud sync, and backup
 
-Current versions store data **locally on your device**. We do **not** guarantee cloud backup unless a sync feature is explicitly offered.
+Current versions store data **locally on your device** by default. If you enable **Cloud sync**, about the last six months of dated transactions and related app data may also be stored with our cloud provider (**Supabase**) as described in the Privacy Policy. MPIN and profile photo are not uploaded by Cloud sync in the current version. Older cloud-dated rows may be pruned automatically; local history is not deleted by sync.
 
-**You are responsible for backing up your device** (e.g. phone backup). Uninstalling the app or losing the device may result in **permanent data loss**.
+You may create an **encrypted offline backup** file (protected by a passphrase you choose) and restore it later on this or another device. **If you forget the passphrase, that backup cannot be recovered.**
+
+**You are responsible for** keeping backup files and passphrases safe. Uninstalling the app or losing the device may result in **permanent data loss** if you have no backup and Cloud sync was never enabled (or did not cover the data you need).
 
 ---
 
@@ -136,13 +140,13 @@ You agree to indemnify and hold us harmless from claims arising from your misuse
 
 We may update the App or these Terms. Continued use after changes constitutes acceptance. Material changes will be reflected by updating the **Effective date**. Check this page periodically.
 
-New features (e.g. cloud sync) may have additional terms presented at launch.
+New or expanded features (for example longer sync windows, profile photo cloud storage, or SMS & email capture) may have additional terms or privacy updates presented at launch.
 
 ---
 
 ## 14. Third-party services
 
-The App may use device services (Google Play, Apple App Store, notification services). Your use of those services is subject to their terms. We are not responsible for third-party platforms.
+The App may use device and platform services (Google Play, Apple App Store, notification services) and cloud providers (including Supabase for Auth and optional Cloud sync). Your use of those services is subject to their terms. We are not responsible for third-party platforms.
 
 ---
 
@@ -164,7 +168,6 @@ These Terms are governed by the laws of **India**, without regard to conflict-of
 
 **Bhaskar**  
 Email: **support.likhdaal@gmail.com**  
-Website: **https://bhaskarthakur607.github.io/ExpenseTracker** (optional)
 
 Support: **support.likhdaal@gmail.com**
 

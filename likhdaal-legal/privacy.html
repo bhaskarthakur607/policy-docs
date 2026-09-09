@@ -24,57 +24,112 @@
     <a class="back" href="index.html">← LikhDaal Legal</a>
     <h1>Privacy Policy</h1>
     <p class="meta">
-      <strong>Effective date:</strong> 27 August 2026<br>
+      <strong>Effective date:</strong> 9 September 2026<br>
       <strong>Developer:</strong> Bhaskar<br>
       <strong>Contact:</strong> <a href="mailto:support.likhdaal@gmail.com">support.likhdaal@gmail.com</a>
     </p>
 
     <h2>1. Introduction</h2>
-    <p>LikhDaal is a personal expense and income tracker. This Privacy Policy explains what information the app handles, how it is used, and your choices. By using LikhDaal, you agree to this policy.</p>
+    <p>LikhDaal (“we”, “our”, “the app”) is a personal expense and income tracker. This Privacy Policy explains what information the app handles, how it is used, and your choices. By using LikhDaal, you agree to this policy. If you do not agree, please do not use the app.</p>
 
     <h2>2. Summary</h2>
     <ul>
-      <li>Your financial entries are stored <strong>on your device</strong>, not on our servers (current version).</li>
+      <li>Your financial entries are stored <strong>on your device</strong> by default.</li>
+      <li>If you turn on <strong>Cloud sync</strong> (Settings → Security &amp; backup), we upload about the <strong>last 6 months</strong> of dated transactions plus related app data (categories, budgets, notes, preferences, and similar) to <strong>Supabase</strong> so you can continue on another device. Older dated cloud rows are removed automatically. Older history stays on this phone unless you create an offline backup.</li>
+      <li>Phone <strong>OTP</strong> uses <strong>Supabase Auth</strong> to verify your mobile number. OTP SMS may be delivered by Supabase and its SMS providers.</li>
+      <li><strong>MPIN</strong> (hashed) and <strong>profile photo</strong> stay on this device — they are <strong>not</strong> uploaded by Cloud sync.</li>
+      <li>Offline backups you create are ledger-focused (they need not include your MPIN or phone identity) and are the right way to archive data older than the sync window.</li>
       <li>We do <strong>not</strong> sell your personal information.</li>
-      <li>You can <strong>delete your account and local data</strong> from Settings.</li>
-      <li>We do <strong>not</strong> currently sync data to the cloud.</li>
+      <li>You can <strong>delete your account</strong> from Settings. That removes local app data on the device and, when a cloud account exists, associated cloud sync data for that account.</li>
+      <li>Turning <strong>Cloud sync off</strong> stops new uploads; existing cloud copies for your account are retained until you delete the account or request deletion.</li>
+      <li><strong>SMS &amp; email capture</strong> is not available yet (shown as coming later in Settings). We do not read your SMS or email in the current version.</li>
     </ul>
 
     <h2>3. Information we handle</h2>
     <table>
       <tr><th>Data</th><th>Purpose</th><th>Stored where</th></tr>
-      <tr><td>Mobile phone number</td><td>Account / login</td><td>On your device</td></tr>
-      <tr><td>Name</td><td>Profile</td><td>On your device</td></tr>
-      <tr><td>Email (optional)</td><td>Profile</td><td>On your device</td></tr>
-      <tr><td>MPIN</td><td>Secure access</td><td>Hashed on device</td></tr>
-      <tr><td>Profile photo (optional)</td><td>Avatar</td><td>On your device</td></tr>
-      <tr><td>Transactions & categories</td><td>App functionality</td><td>On your device</td></tr>
-      <tr><td>Recurring settings</td><td>Auto-entries & reminders</td><td>On your device</td></tr>
+      <tr><td>Mobile phone number</td><td>Create account, log in, phone OTP</td><td>On your device; also with Supabase Auth when OTP is used</td></tr>
+      <tr><td>Name</td><td>Profile; reopen on a new device after OTP</td><td>On your device; also in Auth user metadata when a cloud account exists</td></tr>
+      <tr><td>Email (optional)</td><td>Profile; reopen on a new device after OTP</td><td>On your device; also in Auth metadata when saved to cloud</td></tr>
+      <tr><td>MPIN (4-digit PIN)</td><td>Secure access on <strong>this</strong> device</td><td>One-way hash on device — not plain text; not included in Cloud sync or offline backups</td></tr>
+      <tr><td>Profile photo (optional)</td><td>Avatar</td><td>On your device only (not Cloud synced in the current version)</td></tr>
+      <tr><td>Income &amp; expense entries</td><td>Core app functionality</td><td>On your device; last ~6 months also on Supabase when Cloud sync is on</td></tr>
+      <tr><td>Categories, budgets, notes, preferences</td><td>Organize and personalize the app</td><td>On your device; also on Supabase when Cloud sync is on</td></tr>
+      <tr><td>Recurring / reminder settings</td><td>Auto-entries &amp; local reminders</td><td>On your device; also on Supabase when Cloud sync is on</td></tr>
+      <tr><td>App preferences</td><td>Language, currency, theme, month start, Home toggles; when sync is on also app-lock enabled and gentle-reminders toggle</td><td>On your device; synced preferences when Cloud sync is on</td></tr>
+      <tr><td>Session identifier</td><td>Keep you signed in on the device</td><td>On your device / auth session as applicable</td></tr>
     </table>
+    <p>We do <strong>not</strong> use third-party advertising analytics in the current version unless stated in an app update.</p>
 
-    <h2>4. Permissions</h2>
+    <h2>4. Device permissions</h2>
     <ul>
-      <li><strong>Notifications</strong> — optional recurring payment reminders</li>
+      <li><strong>Notifications</strong> — optional reminders for recurring payments</li>
       <li><strong>Camera / Photos</strong> — optional profile picture</li>
     </ul>
+    <p>You can deny optional permissions; core tracking still works.</p>
 
     <h2>5. How we use information</h2>
-    <p>We use data only to operate the app, secure access with MPIN, send local reminders you enable, and export reports you request. We do not use your data for advertising.</p>
+    <p>We use your information only to:</p>
+    <ul>
+      <li>Operate the app (record, display, and report your finances)</li>
+      <li>Secure access with MPIN</li>
+      <li>Verify your phone number with OTP when you create or restore a cloud-linked account</li>
+      <li>Sync the last ~6 months when you enable Cloud sync</li>
+      <li>Send <strong>local</strong> reminders you enable</li>
+      <li>Export reports or offline backups that <strong>you</strong> initiate</li>
+    </ul>
+    <p>We do not use your data for advertising or sell it to third parties.</p>
 
-    <h2>6. Data sharing</h2>
-    <p>We do not share your personal or financial entries with third parties in the current version, except if required by law.</p>
+    <h2>6. Data storage and security</h2>
+    <ul>
+      <li>Primary storage is a <strong>local database on your phone</strong>.</li>
+      <li>MPIN is stored as a <strong>hashed</strong> value, not readable text.</li>
+      <li>Cloud sync (when enabled) stores in-window data with <strong>Supabase</strong> under their security practices and our configuration (including access controls for your account).</li>
+      <li><strong>Uninstalling</strong> the app or using <strong>Delete account</strong> removes app data from that device (subject to OS behavior). Delete account also removes associated cloud sync data for that account when a cloud account exists.</li>
+      <li>No method of storage is 100% secure; protect your device with a screen lock and keep offline backup passphrases safe.</li>
+    </ul>
 
-    <h2>7. Your choices</h2>
-    <p>You can access, update, or delete your data in the app. Use <strong>Settings → Delete account</strong> to remove your data from the device.</p>
+    <h2>7. Data sharing / processors</h2>
+    <p>We do <strong>not sell</strong> your personal or financial entries.</p>
+    <p>When you use phone OTP or enable Cloud sync, data is processed by <strong>Supabase</strong> (and, for OTP SMS, Supabase’s SMS providers) as needed to provide those features. Their use is subject to their terms and this Privacy Policy.</p>
+    <p>Information may also be disclosed if:</p>
+    <ul>
+      <li>Required by law or valid legal process</li>
+      <li>Necessary to protect rights, safety, or prevent fraud</li>
+    </ul>
+    <p>If we expand sync (for example a longer history window or profile photo cloud storage) or add SMS/email import, we will update this policy before or when those features launch.</p>
 
-    <h2>8. Children</h2>
-    <p>LikhDaal is not directed at children under 13 (or under 18 for financial use).</p>
+    <h2>8. Data retention</h2>
+    <ul>
+      <li>On-device data remains until you edit or delete entries, delete your account, or uninstall the app.</li>
+      <li>Cloud-dated entries outside the ~6-month window are pruned automatically when Cloud sync runs; local history is <strong>not</strong> deleted by sync.</li>
+      <li>After <strong>Delete account</strong>, we delete your profile and ledger from the app database on that device and associated cloud sync data for that account when applicable.</li>
+    </ul>
 
-    <h2>9. Changes</h2>
-    <p>We may update this policy. The effective date at the top will change when we do.</p>
+    <h2>9. Your rights and choices</h2>
+    <p>You can:</p>
+    <ul>
+      <li><strong>Access</strong> and <strong>update</strong> your data in the app</li>
+      <li>Turn <strong>Cloud sync</strong> on or off in Security &amp; backup</li>
+      <li><strong>Delete account</strong> (Settings → Delete account)</li>
+      <li>Change notification and reminder settings</li>
+      <li><strong>Export</strong> reports where the app provides export</li>
+      <li><strong>Create / restore an offline backup</strong> (encrypted with your passphrase; if you forget the passphrase, that backup cannot be recovered)</li>
+    </ul>
+    <p>For users in India and other regions with privacy laws, you may contact us about your data.</p>
 
-    <h2>10. Contact</h2>
+    <h2>10. Children</h2>
+    <p>LikhDaal is not directed at children under 13 (or under 18 for financial use). We do not knowingly collect data from children. Contact us if you believe a child has provided information.</p>
+
+    <h2>11. International users</h2>
+    <p>The app is designed primarily for users in <strong>India</strong> (INR default, Hindi/English). On-device data is processed where you use the app. Cloud sync and Auth may process data in regions used by Supabase for those services.</p>
+
+    <h2>12. Changes</h2>
+    <p>We may update this Privacy Policy. We will change the <strong>Effective date</strong> at the top. Continued use after updates means you accept the revised policy. Material changes may be noted in the app or store listing.</p>
+
+    <h2>13. Contact</h2>
     <p>Bhaskar<br>Email: <a href="mailto:support.likhdaal@gmail.com">support.likhdaal@gmail.com</a></p>
+    <p>Questions about privacy or data deletion: <a href="mailto:support.likhdaal@gmail.com">support.likhdaal@gmail.com</a></p>
     <p><em>LikhDaal — Apna hisab, aaram se.</em></p>
   </div>
 </body>

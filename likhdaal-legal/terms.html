@@ -21,40 +21,94 @@
     <a class="back" href="index.html">← LikhDaal Legal</a>
     <h1>Terms of Service</h1>
     <p class="meta">
-      <strong>Effective date:</strong> 27 August 2026<br>
+      <strong>Effective date:</strong> 9 September 2026<br>
       <strong>Developer:</strong> Bhaskar<br>
       <strong>Contact:</strong> <a href="mailto:support.likhdaal@gmail.com">support.likhdaal@gmail.com</a>
     </p>
 
     <h2>1. Agreement</h2>
-    <p>These Terms govern your use of LikhDaal provided by Bhaskar. By using the app, you agree to these Terms and our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>These Terms of Service (“Terms”) govern your use of the LikhDaal mobile application (“App”, “Service”) provided by <strong>Bhaskar</strong> (“we”, “us”, “our”). By downloading, installing, or using LikhDaal, you agree to these Terms and our <a href="privacy.html">Privacy Policy</a>. If you do not agree, do not use the App.</p>
 
-    <h2>2. Service description</h2>
-    <p>LikhDaal helps you record income and expenses, view reports, and set optional recurring reminders. It is <strong>not a bank</strong> and does not move or hold money. All amounts are entered by you for personal tracking.</p>
+    <h2>2. Description of service</h2>
+    <p>LikhDaal is a <strong>personal finance helper</strong> that lets you:</p>
+    <ul>
+      <li>Record income and expenses</li>
+      <li>Organize entries by category</li>
+      <li>View summaries and reports</li>
+      <li>Set budgets, recurring payments, and optional reminders</li>
+      <li>Track lent &amp; borrowed balances and notes</li>
+      <li>Optionally enable <strong>Cloud sync</strong> for about the last 6 months of dated entries</li>
+      <li>Create encrypted offline backups and export reports (where available)</li>
+    </ul>
+    <p>LikhDaal is <strong>not a bank</strong>, <strong>not a payment service</strong>, and does <strong>not</strong> move, hold, or transmit money. All figures are entered by you for personal tracking only.</p>
 
     <h2>3. Eligibility</h2>
-    <p>You must be at least 18 years old (or the age of majority in your region) and provide accurate registration information.</p>
+    <p>You must be at least <strong>18 years old</strong> (or the age of majority in your region), provide accurate registration information (mobile number, name), and use the App only for lawful personal purposes.</p>
 
-    <h2>4. Account &amp; MPIN</h2>
-    <p>You are responsible for keeping your MPIN confidential and securing your device. Data is stored locally on your phone. You may delete your account from Settings.</p>
+    <h2>4. Account and security</h2>
+    <p><strong>Registration.</strong> You register with a <strong>mobile number</strong> and <strong>4-digit MPIN</strong>. Phone OTP (via Supabase Auth) may be used to create or verify a cloud-linked account and to sign in on a new device. You are responsible for keeping your MPIN confidential and for activity under your account on your devices.</p>
+    <p><strong>Device security.</strong> Because primary data lives on your device (and optionally in the cloud when sync is on), you should use a device screen lock, not share your MPIN, and log out on shared devices. We are not liable for unauthorized access caused by lost devices, shared MPINs, or compromised phones.</p>
+    <p><strong>Account deletion.</strong> You may delete your account from <strong>Settings → Delete account</strong>. This removes your data from the app on that device and associated cloud sync data for that account when applicable, as described in the Privacy Policy.</p>
 
-    <h2>5. Your responsibility</h2>
-    <p>You are responsible for the accuracy of entries. LikhDaal is not financial, tax, or legal advice. Consult professionals for official decisions.</p>
+    <h2>5. Your data and responsibility</h2>
+    <ul>
+      <li><strong>You own</strong> the content you enter (amounts, notes, categories).</li>
+      <li><strong>You are responsible</strong> for the accuracy of entries. LikhDaal does not verify bank balances, bills, or tax figures.</li>
+      <li>The App is a <strong>tracking tool</strong>, not financial, tax, or legal advice. Consult qualified professionals for tax, investment, or legal decisions.</li>
+    </ul>
 
     <h2>6. Acceptable use</h2>
-    <p>Do not use the app for illegal activity, fraud, or attempts to hack or disrupt the service.</p>
+    <p>You agree <strong>not</strong> to:</p>
+    <ul>
+      <li>Use the App for illegal activity or fraud</li>
+      <li>Attempt to reverse engineer, hack, or disrupt the App or related cloud services</li>
+      <li>Use the App to launder money or misrepresent financial information to third parties</li>
+      <li>Upload harmful code or interfere with other users’ accounts or sync</li>
+    </ul>
+    <p>We may suspend or terminate access for violations.</p>
 
-    <h2>7. Disclaimer</h2>
-    <p>The app is provided “as is” without warranties. We do not guarantee error-free operation or that data will never be lost.</p>
+    <h2>7. Intellectual property</h2>
+    <p>The App, logo, design, and software are owned by <strong>Bhaskar</strong> or its licensors. You receive a limited, non-exclusive, non-transferable license to use the App for personal, non-commercial purposes. You may not copy, modify, distribute, or sell the App except as allowed by law or with our written permission.</p>
 
-    <h2>8. Limitation of liability</h2>
-    <p>To the maximum extent permitted by law, Bhaskar is not liable for indirect or consequential damages arising from use of the app. Total liability is limited to INR 1,000 for the free app.</p>
+    <h2>8. Offline storage, Cloud sync, and backup</h2>
+    <p>Current versions store data <strong>locally on your device</strong> by default. If you enable <strong>Cloud sync</strong>, about the last six months of dated transactions and related app data may also be stored with our cloud provider (<strong>Supabase</strong>) as described in the <a href="privacy.html">Privacy Policy</a>. MPIN and profile photo are not uploaded by Cloud sync in the current version. Older cloud-dated rows may be pruned automatically; local history is not deleted by sync.</p>
+    <p>You may create an <strong>encrypted offline backup</strong> file (protected by a passphrase you choose) and restore it later on this or another device. <strong>If you forget the passphrase, that backup cannot be recovered.</strong></p>
+    <p><strong>You are responsible for</strong> keeping backup files and passphrases safe. Uninstalling the app or losing the device may result in <strong>permanent data loss</strong> if you have no backup and Cloud sync was never enabled (or did not cover the data you need).</p>
 
-    <h2>9. Governing law</h2>
-    <p>These Terms are governed by the laws of India. Courts in India have jurisdiction unless consumer law requires otherwise.</p>
+    <h2>9. Notifications</h2>
+    <p>Optional reminders use your device’s notification system. You can disable notifications in app or system settings. We do not guarantee delivery of reminders (battery, OS limits, etc.).</p>
 
-    <h2>10. Contact</h2>
-    <p>Bhaskar<br>Email: <a href="mailto:support.likhdaal@gmail.com">support.likhdaal@gmail.com</a></p>
+    <h2>10. Disclaimer of warranties</h2>
+    <p>THE APP IS PROVIDED <strong>“AS IS”</strong> AND <strong>“AS AVAILABLE”</strong> WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+    <p>We do not warrant that the App will be error-free or uninterrupted; that calculations or reports are accurate for tax or official purposes; or that data will never be lost.</p>
+
+    <h2>11. Limitation of liability</h2>
+    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, <strong>Bhaskar</strong> SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM YOUR USE OF THE APP.</p>
+    <p>OUR TOTAL LIABILITY FOR ANY CLAIM SHALL NOT EXCEED THE AMOUNT YOU PAID US FOR THE APP IN THE TWELVE (12) MONTHS BEFORE THE CLAIM (OR <strong>INR 1,000</strong> IF THE APP IS FREE).</p>
+    <p>Some jurisdictions do not allow certain limitations; in those cases, our liability is limited to the fullest extent permitted by law.</p>
+
+    <h2>12. Indemnity</h2>
+    <p>You agree to indemnify and hold us harmless from claims arising from your misuse of the App, violation of these Terms, or violation of any law or third-party rights.</p>
+
+    <h2>13. Updates and changes</h2>
+    <p>We may update the App or these Terms. Continued use after changes constitutes acceptance. Material changes will be reflected by updating the <strong>Effective date</strong>. Check this page periodically.</p>
+    <p>New or expanded features (for example longer sync windows, profile photo cloud storage, or SMS &amp; email capture) may have additional terms or privacy updates presented at launch.</p>
+
+    <h2>14. Third-party services</h2>
+    <p>The App may use device and platform services (Google Play, Apple App Store, notification services) and cloud providers (including Supabase for Auth and optional Cloud sync). Your use of those services is subject to their terms. We are not responsible for third-party platforms.</p>
+
+    <h2>15. Termination</h2>
+    <p>You may stop using the App at any time by uninstalling it and deleting your account. We may discontinue the App or your access if you breach these Terms or if required by law.</p>
+
+    <h2>16. Governing law</h2>
+    <p>These Terms are governed by the laws of <strong>India</strong>, without regard to conflict-of-law principles. Courts in <strong>India</strong> shall have exclusive jurisdiction, unless consumer protection law in your region requires otherwise.</p>
+
+    <h2>17. Contact</h2>
+    <p>Bhaskar<br>Email: <a href="mailto:support.likhdaal@gmail.com">support.likhdaal@gmail.com</a><br>Support: <a href="mailto:support.likhdaal@gmail.com">support.likhdaal@gmail.com</a></p>
+
+    <h2>18. Severability</h2>
+    <p>If any provision is found unenforceable, the remaining provisions remain in effect.</p>
+
     <p><em>LikhDaal — Apna hisab, aaram se.</em></p>
   </div>
 </body>
